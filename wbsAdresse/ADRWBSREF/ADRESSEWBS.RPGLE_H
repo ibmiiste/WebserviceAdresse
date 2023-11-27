@@ -1,4 +1,4 @@
-﻿**free
+**free
 dcl-pr getAdresse pointer;
     pRecherche Pointer Value Options(*string:*nopass);
     pLimit Int(5) Const options(*nopass);
@@ -13,4 +13,5 @@ end-pr;
 dcl-pr addressAccount int(10);
     pString pointer;
 end-pr;
+
 

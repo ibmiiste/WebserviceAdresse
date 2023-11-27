@@ -1,4 +1,4 @@
-﻿**FREE
+**FREE
 //getAdresseParTexte
 
 
@@ -31,7 +31,7 @@ dcl-proc getAdresseParTexte Export;
         if recherche <> *blanks;
             url += get + separateur + 'q=' + %scanrpl(recherche:' ':'+');
             split='&';
-        endif;  
+        endif;
     endif;
 
     if %parms >= 2;
@@ -60,8 +60,8 @@ dcl-proc getAdresseParTexte Export;
     endif;
 
 
-    Exec sql 
-        set :reponse = systools.httpgetclob(:url,''); 
+    Exec sql
+        set :reponse = systools.httpgetclob(:url,'');
 
     json = JSON_ParseString(reponse);
 
@@ -75,5 +75,6 @@ dcl-proc addressAccount Export;
       pString pointer;
     end-pi;
 
-    return json_GetLength(pString);  
+    return json_GetLength(pString);
 end-proc;
+
